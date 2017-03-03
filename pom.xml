@@ -9,5 +9,6 @@
   	<module>emf-model</module>
     <module>fb-integration</module>
     <module>tree-viewer</module>
+    <module>hibernate-hands-on</module>
   </modules>
 </project>

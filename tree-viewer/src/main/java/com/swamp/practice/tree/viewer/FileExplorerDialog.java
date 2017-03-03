@@ -17,43 +17,42 @@ import com.swamp.practice.tree.provider.CustomTreeLabelProvider;
 
 public class FileExplorerDialog extends Dialog {
 
+	TreeViewer treeViewer = null;
+
 	public FileExplorerDialog(Shell parentShell) {
 		super(parentShell);
-
+		
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	protected Control createContents(Composite parent) {
 
-//		System.out.println("create");
-		 
-		
-		TreeViewer v = new TreeViewer(parent);		
-		v.setContentProvider(new CustomTreeContentProvider());
-		v.setLabelProvider(new CustomTreeLabelProvider());
-		v.setInput(new File("D:/movies"));
-		v.getTree().setLayoutData(new GridData(GridData.FILL));
+		// System.out.println("create");
+
+		treeViewer = new TreeViewer(parent);
+		treeViewer.setContentProvider(new CustomTreeContentProvider());
+		treeViewer.setLabelProvider(new CustomTreeLabelProvider());
+		treeViewer.setInput(new File("D:/movies"));
+		treeViewer.getTree().setLayoutData(new GridData(GridData.FILL));
 		super.createContents(parent);
 		return null;
 	}
+
 	@Override
 	public int open() {
-		System.out.println("open pressed");
-		// TODO Auto-generated method stub
 		return super.open();
 	}
 
 	@Override
 	protected void okPressed() {
-
-		System.out.println("ok pressed");
+		System.out.println(treeViewer.getSelection());
 		super.okPressed();
 	}
 
 	@Override
 	protected void configureShell(Shell newShell) {
-		
+
 		// TODO Auto-generated method stub
 		super.configureShell(newShell);
 		newShell.setLayout(new GridLayout());
