@@ -4,12 +4,18 @@ import java.io.File;
 
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.FileDialog;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
 import com.swamp.practice.tree.provider.CustomTreeContentProvider;
@@ -35,6 +41,24 @@ public class FileExplorerDialog extends Dialog {
 		treeViewer.setLabelProvider(new CustomTreeLabelProvider());
 		treeViewer.setInput(new File("D:/movies"));
 		treeViewer.getTree().setLayoutData(new GridData(GridData.FILL));
+		Label l = new Label(parent, 0);
+		l.setText("Hello");
+		Button b = new Button(parent, SWT.PUSH);
+		b.setText("click me");
+		b.setLayoutData(new GridData());
+		b.addSelectionListener(new SelectionListener() {
+
+			public void widgetSelected(SelectionEvent e) {
+				FileDialog di = new FileDialog(new Shell());
+				System.out.println(di.open());
+			}
+
+			public void widgetDefaultSelected(SelectionEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+		
 		super.createContents(parent);
 		return null;
 	}

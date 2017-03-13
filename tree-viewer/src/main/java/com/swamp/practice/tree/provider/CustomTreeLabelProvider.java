@@ -5,6 +5,7 @@ import java.io.File;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.graphics.ImageData;
 
 public class CustomTreeLabelProvider implements ILabelProvider {
 
@@ -30,7 +31,11 @@ public class CustomTreeLabelProvider implements ILabelProvider {
 
 	public Image getImage(Object element) {
 		// TODO Auto-generated method stub
-		return null;
+		ImageData source = new ImageData(getClass().getResourceAsStream("/icon/download.png"));
+		
+	      ImageData mask = source.getTransparencyMask();
+	      return new Image(null, source, mask); 
+//	      return null;
 	}
 
 	public String getText(Object element) {

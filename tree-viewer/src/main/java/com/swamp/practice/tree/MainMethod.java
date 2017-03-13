@@ -1,8 +1,13 @@
 package com.swamp.practice.tree;
 
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
@@ -21,12 +26,9 @@ public class MainMethod {
 		s.setText("Title");
 		s.setLayout(new GridLayout());
 		FileExplorerDialog dialog = new FileExplorerDialog(s);
-		AppWindow w = new AppWindow(s);
-//		w.open();
-		
 
-		Label l = new Label(s, 0);
-		l.setText("Hello");
+		// w.open();
+
 		
 
 		dialog.open();
