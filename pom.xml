@@ -10,5 +10,6 @@
     <module>fb-integration</module>
     <module>tree-viewer</module>
     <module>hibernate-hands-on</module>
+    <module>jetty-server-practice</module>
   </modules>
 </project>

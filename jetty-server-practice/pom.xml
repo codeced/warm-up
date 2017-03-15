@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>warm-up</groupId>
+		<artifactId>warm-up</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>warm-up</groupId>
+	<artifactId>jetty-server-practice</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>jetty-server-practice</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>9.4.2.v20170220</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-webapp -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
+			<version>9.4.2.v20170220</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/apache-jsp -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>apache-jsp</artifactId>
+			<version>9.4.2.v20170220</version>
+		</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/apache-jstl -->
+<dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>apache-jstl</artifactId>
+    <version>9.2.1.v20140609</version>
+</dependency>
+
+
+	</dependencies>
+</project>
